@@ -1,4 +1,4 @@
-package com.equipe.helloworld
+package com.equipe.base26
 
 import android.content.Intent
 import android.os.Bundle
