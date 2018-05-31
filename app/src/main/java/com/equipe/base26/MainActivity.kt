@@ -16,12 +16,16 @@ class MainActivity : AppCompatActivity() {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_main)
     button.setOnClickListener({
-      getActualValue(editText.text.toString())
+      setNumericValue(getActualValue(editText.text.toString()))
+
     })
   }
 
-  private fun getActualValue(s: String) {
-    print(Utils.getAlphaNumeric(s))
-    textView.text = Utils.getAlphaNumeric(s).toString()
+  fun setNumericValue(actualValue: String) {
+    textView.text = actualValue
+  }
+
+  fun getActualValue(s: String): String {
+    return Utils.getAlphaNumeric(s).toString()
   }
 }
